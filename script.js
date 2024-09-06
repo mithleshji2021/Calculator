@@ -19,14 +19,10 @@ function deleteLast() {
 
 function calculateResult() {
     try {
-        const history = display.value
-        
         
         display.value = `${eval(display.value)} 
-        ${history}`
+        ${display.value}`
         
-        
-
     } catch (error) {
         display.vlue = "Error";
     }
