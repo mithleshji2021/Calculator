@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-[#2d2e71]">
+
+
+    <main class="w-full h-screen flex flex-col justify-center items-center gap-6 mb-8 ">
+
+        <div class=" hidden lg:flex w-full lg:justify-center lg:items-center  ">
+            <p class="text-3xl font-semibold text-[#efee88] bg-gray-600 px-24 py-2 rounded-full">Calculator</p>
+        </div>
+        <div class="bg-gray-950 px-8 py-12 rounded-3xl text-white font-semibold ">
+            
+            <div class="flex justify-end mb-12 ">
+                <textarea name="text" id="display" autofocus-none
+                    class="text-right w-full h-16  mx-h-32 bg-gray-950 overflow-auto resize-none px-2  font-semibold text-wrap outline-none text-2xl " placeholder="0" >
+                </textarea>
+
+            </div>
+
+            <div class="buttons grid grid-cols-4 grid-rows-5 gap-8">
+                <button onclick="clearDisplay()" class="bg-gray-600 h-12  w-12 rounded-full ">C</button>
+                <button onclick="deleteLast()" class="bg-gray-600 h-12  w-12 rounded-full"><i class="fa-solid fa-delete-left"></i></button>
+                <button onclick="appendCharacter('/')" class="bg-blue-600 h-12  w-12 rounded-full">/</button>
+                <button onclick="appendCharacter('*')" class="bg-blue-600 h-12  w-12 rounded-full">X</button>
+                <button onclick="appendCharacter('7')" class="bg-gray-600 h-12  w-12 rounded-full">7</button>
+                <button onclick="appendCharacter('8')" class="bg-gray-600 h-12  w-12 rounded-full">8</button>
+                <button onclick="appendCharacter('9')" class="bg-gray-600 h-12  w-12 rounded-full">9</button>
+                <button onclick="appendCharacter('-')" class="bg-blue-600 h-12  w-12 rounded-full">-</button>
+                <button onclick="appendCharacter('4')" class="bg-gray-600 h-12  w-12 rounded-full">4</button>
+                <button onclick="appendCharacter('5')" class="bg-gray-600 h-12  w-12 rounded-full">5</button>
+                <button onclick="appendCharacter('6')" class="bg-gray-600 h-12  w-12 rounded-full">6</button>
+                <button onclick="appendCharacter('+')" class="bg-blue-600 h-12  w-12 rounded-full">+</button>
+                <button onclick="appendCharacter('1')" class="bg-gray-600 h-12  w-12 rounded-full">1</button>
+                <button onclick="appendCharacter('2')" class="bg-gray-600 h-12  w-12 rounded-full">2</button>
+                <button onclick="appendCharacter('3')" class="bg-gray-600 h-12  w-12 rounded-full">3</button>
+                <button onclick="appendCharacter('%')" class="bg-blue-600 h-12  w-12 rounded-full">%</button>
+                <button onclick="appendCharacter('00')" class="bg-gray-600 h-12  w-12 rounded-full">00</button>
+                <button onclick="appendCharacter('0')" class="bg-gray-600 h-12  w-12 rounded-full">0</button>
+                <button onclick="appendCharacter('.')" class="bg-gray-600 h-12  w-12 rounded-full">.</button>
+                <button onclick="calculateResult()" class="bg-[#d07a2f] h-12  w-12 rounded-full">=</button>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
+
